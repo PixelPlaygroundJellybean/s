@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treasure Hunt</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: url(paper\ baground.jpg) no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      color: #3e2723;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      animation: fadeSlide 1s ease forwards;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 40px;
+      color: #4e2607;
+      text-shadow: 2px 2px 0 #d2b48c;
+      animation: popUp 0.8s ease-out;
+    }
+
+    @keyframes popUp {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .riddle-image {
+      width: 100%;
+      max-width: 800px;
+      border: 5px solid #8b5a2b;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      margin: 30px 0;
+      transition: transform 0.4s ease;
+    }
+
+    .riddle-image:hover {
+      transform: scale(1.02);
+    }
+
+    button {
+      background: linear-gradient(to right, #ffd700, #ffcc00);
+      color: #3e2723;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #ffcc00, #ffd700);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .riddle-image { width: 90%; }
+      button { font-size: 16px; padding: 12px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🗺️ The Treasure Hunt</h1>
+
+  <img class="riddle-image" src="AC.jpg" alt="Riddle" />
+
+  <button onclick="closeTab()">Start Journey</button>
+
+  <script>
+    function closeTab() {
+      window.open('', '_self', '');
+      window.close();
+      alert("Browser ah close panitu olunga location ah thedu bro 😬");
+    }
+  </script>
+
+</body>
+</html>
